@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block title %}reports{% endblock %} 
+{%block header%}
+<head>
+    <h1>Requested report</h1>
+</head>
+{%endblock%}
+{%block content %}
+<body methods = 'GET'>
+    <table>
+        <tr>
+            {% for head in headings %}
+            <th>{{ head }}</th>
+            {%endfor%}
+        </tr>
+        {%for row in data%}
+        <tr>
+            
+            <td>{{ row.rx_number }}</td>
+            <td>{{ row.fill_number }}</td>
+            <td>{{ row.drug_name }}</td>
+            <td>{{ row.drug_strenght }}</td>
+            <td>{{ row.drug_form }}</td>
+            <td>{{ row.gpi14 }}</td>
+            <td>{{ row.drug_quantity }}</td>
+            <td>{{ row.day_supply }}</td>
+
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+{%endblock%}

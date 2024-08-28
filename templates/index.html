@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block title %}home{% endblock %} 
+
+{%block content%}
+<h3>
+    Dispensing system. It helps you to track prescribed medications and create reports
+</h3>
+<div class="row justify-content-between"> 
+    <div class=" col-md-6" >
+        <a href="{{ url_for('main.dispense') }}"
+                class="btn btn-primary"
+                role="button"
+                >enter dispense</a
+
+    
+    </div>
+    <div class=" col-md-6" >
+        <a href="{{ url_for('main.reports_requests') }}"
+                class="btn btn-primary"
+                role="button"
+                >reports</a
+    </div>
+</div>
+{%endblock%}

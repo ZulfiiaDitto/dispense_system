@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block title %}reports{% endblock %} 
+{%block content%}
+<div class = "col-md-6">
+    <form method="POST" action="{{url_for('main.reports_requests')}}"> 
+    <form>
+        <div class="row justify-content-between"> 
+    
+        <div class="col-md-6">
+          <label for="drug_name" class="form-label">find by drug name</label>
+          <input type="text" class="form-control" id="drug_name" name="drug_name">
+        </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form> 
+  {%endblock%}
+    

@@ -1,0 +1,153 @@
+{% extends "base.html" %} {% block title %}Dispense{% endblock %} 
+{%block content%} 
+<div class = "col-md-6">
+<form method="POST" action="{{url_for('main.dispense')}}"> 
+<form>
+    <div class="row justify-content-between"> 
+
+    <div class="col-md-6">
+      <label for="rx_number" class="form-label">Rx number</label>
+      <input type="text" class="form-control" id="rx_number" name="rx_number">
+    </div>
+    <div class="col-md-6">
+      <label for="Fill Number" class="form-label">Fill number</label>
+      <input type="text" class="form-control" id="fill_number" name="fill_number">
+    </div>
+   
+    </div>
+
+    <div class="row justify-content-between"> 
+    <div class="col-md-6">
+      <label for="first name" class="form-label" >Patient First Name</label>
+      <input type="text" class="form-control" id="first_name" name="first_name"> 
+    </div>
+    <div class="col-md-6">
+        <label for="last name" class="form-label" >Patient Last Name</label>
+        <input type="text" class="form-control" id="last_name" name="last_name"> 
+    </div>
+
+    </div>
+
+    <div class="row justify-content-between"> 
+    <div class="col-md-6">
+        <label for="dob" class="form-label" >Patient Date of Birth</label>
+        <input type="text" class="form-control" id="dob" name="dob"> 
+    </div>
+    <div class="col-md-6">
+        <label for="pt_address" class="form-label" >Patient Address</label>
+        <input type="text" class="form-control" id="pt_address" name="pt_address"> 
+    </div>
+    
+    </div>
+
+    <div class="row justify-content-between"> 
+    <div class="col-md-6">
+        <label for="pt_city" class="form-label" >Patient City</label>
+        <input type="text" class="form-control" id="pt_city" name="pt_city"> 
+    </div>
+    <div class="col-md-6">
+        <label for="pt_sttae" class="form-label" >Patient State</label>
+        <input type="text" class="form-control" id="pt_state" name="pt_state"> 
+    </div>
+    
+    </div>
+
+    <div class="row justify-content-between"> 
+    <div class="col-md-6">
+        <label for="pt_zip" class="form-label" >Patient Zip</label>
+        <input type="text" class="form-control" id="pt_zip" name="pt_zip"> 
+    </div>
+    <div class="col-md-6">
+        <label for="pt_phone" class="form-label" >Patient Phone</label>
+        <input type="text" class="form-control" id="pt_phone" name="pt_phone"> 
+    </div>
+    </div>
+
+    <div class="row justify-content-between"> 
+    <div class="col-md-6">
+        <label for="dispense_drug_name" class="form-label" >Dispensed Drug Name</label>
+        <input type="text" class="form-control" id="dispense_drug_name" 
+        name="dispense_drug_name"> 
+    </div>
+    <div class="col-md-6">
+        <label for="dispense_drug_strenght" class="form-label" >Dispensed Drug Strenght</label>
+        <input type="text" class="form-control" id="dispense_drug_strenght" 
+        name="dispense_drug_strenght"> 
+    </div>
+    </div>
+
+    <div class="row justify-content-between"> 
+    <div class="col-md-6">
+        <label for="dispense_drug_form" class="form-label" >Dispensed Drug Form</label>
+        <input type="text" class="form-control" id="dispense_drug_form" 
+        name="dispense_drug_form"> 
+    </div>
+    <div class="col-md-6">
+        <label for="dispense_drug_quantity" class="form-label" >Dispensed Drug Quantity</label>
+        <input type="text" class="form-control" id="dispense_drug_quantity" 
+        name="dispense_drug_quantity"> 
+    </div>
+    </div>
+
+    <div class="row justify-content-between"> 
+    <div class="col-md-6">
+        <label for="day_supply" class="form-label" >Dispensed Days Supply</label>
+        <input type="text" class="form-control" id="day_supply" 
+        name="day_supply"> 
+    </div>
+    <div class="col-md-6">
+        <label for="gpi14" class="form-label" >Dispensed Drug GPI14</label>
+        <input type="number" class="form-control" id="gpi14" 
+        name="gpi14"> 
+    </div>
+    </div>
+   
+
+    <div class="row justify-content-between"> 
+        <div class="col-md-6">
+            <label for="Prescribed Physician First Name" class="form-label">Prescribed Physician First Name</label>
+            <input type="text" class="form-control" id="phys_first_name" name="phys_first_name">
+        </div>
+        <div class="col-md-6">
+            <label for="Prescribed Physician Last Name" class="form-label">Prescribed Physician Last Name</label>
+            <input type="text" class="form-control" id="phys_last_name" name="phys_last_name">
+          </div>
+     </div>
+
+
+    <div class="row justify-content-between"> 
+     <div class="col-md-6">
+        <label for="phys_address" class="form-label" >Physician Busness Address</label>
+        <input type="text" class="form-control" id="phys_address" name="phys_address"> 
+    </div>
+    <div class="col-md-6">
+        <label for="phys_state" class="form-label" >Physician Business State</label>
+        <input type="text" class="form-control" id="phys_state" name="phys_state"> 
+    </div>
+    </div>
+    <div class="row justify-content-between"> 
+        <div class="col-md-6">
+           <label for="phys_city" class="form-label" >Physician Busness City</label>
+           <input type="text" class="form-control" id="phys_city" name="phys_city"> 
+       </div>
+       <div class="col-md-6">
+        
+       </div>
+       </div>
+
+    <div class="row justify-content-between">
+        <div class="col-md-6">
+            <label for="phys_zip" class="form-label" >Physician Business Zip</label>
+            <input type="text" class="form-control" id="phys_zip" name="phys_zip"> 
+        </div>
+        <div class="col-md-6">
+            <label for="phys_phone" class="form-label" >Physician Business Phone</label>
+            <input type="text" class="form-control" id="phys_phone" name="phys_phone"> 
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+
+</div> 
+{%endblock%}
